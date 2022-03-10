@@ -6,7 +6,7 @@ from time import sleep
 # Initialisation of pins
 enable = Pin(2, Pin.OUT)
 reset = Pin(3, Pin.OUT)
-buff = ["a"]*300
+buff = ["a"]*64
 uart = UART(0,9600)
 i = 0
 enable.high()
