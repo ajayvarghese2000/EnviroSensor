@@ -1,9 +1,7 @@
-from ubinascii import unhexlify
 from machine import UART, Pin
 from time import sleep
 from math import floor
-from array import array
-from binascii import hexlify
+
 #uarttx = Pin(0,Pin.ALT)
 #uartrx = Pin(1,Pin.ALT)
 
@@ -38,20 +36,21 @@ def data_process(a):
                 IndexDat = IndexDat + 1
 
             IndexBuff = IndexBuff + 1
+    else:
+        return
 
-    print(temp)
+    print(a)
     var = "G"
-
     # Split output into data array
     for i in range(len(temp) - 4):
-        
         if i%2 == 0:
             var = temp[i+2]
         else:
-            #var = "0x" + var + temp[i+2]
-            Data[int(floor(i/2))] = int("0x15", base=16)
-
-    return Data
+            var = var + temp[i+2]
+            #print(var)
+            Data[int(floor(i/2))] = int(var,16)
+    #print(temp)
+    print(Data)
 
         
 
@@ -60,11 +59,11 @@ def Data_Aloc():
 
 
 # Start of loops
-while i<2:
+while i<10:
 
     # Data Collection
     Buff = str(uart.readline())
     i = i+1
     sleep(1)
-    popom = int("0x15", base=16)
-    print(popom)
+    #print(int("0x9a"))
+    data_process(Buff)
