@@ -52,12 +52,6 @@ def data_process(a):
     #print(temp)
     print(Data)
 
-        
-
-def Data_Aloc():
-    Data = [int]*13
-
-
 # Start of loops
 while i<10:
 
