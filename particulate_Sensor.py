@@ -2,17 +2,9 @@ from machine import UART, Pin
 from time import sleep
 from math import floor
 
-#uarttx = Pin(0,Pin.ALT)
-#uartrx = Pin(1,Pin.ALT)
 
-# Initialisation of pins
-enable = Pin(2, Pin.OUT)
-reset = Pin(3, Pin.OUT)
 buff = ["a"]*64
 uart = UART(0,9600)
-i = 0
-enable.high()
-reset.high()
 
 
 def data_process(a):
@@ -52,12 +44,11 @@ def data_process(a):
     #print(temp)
     print(Data)
 
-# Start of loops
-while i<10:
-
+# Test Loop
+for i in range(10):
     # Data Collection
     Buff = str(uart.readline())
-    i = i+1
-    sleep(1)
+    sleep(0.1)
     #print(int("0x9a"))
     data_process(Buff)
+
