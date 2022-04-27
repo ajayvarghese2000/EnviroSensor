@@ -48,16 +48,20 @@ This repository contains code to interface the Enviro+ sensor board with the Mai
 
 
 
-**Subsystem Diagram :**
-*to be added*
+**Subsystem Diagram :** The Enviro+ has many subsystems onboard that can be interfaced with using I2C and SPI bus
 <p align="center">
-	<img src="" alt="High Level Diagram"/>
+	<img src="https://i.imgur.com/LSUJ2IL.png" alt="High Level Diagram"/>
 </p>
 
 
 
 ### Wiring Diagram
-*To be added when finalised*
+
+As the Enviro+ is a Pi-Hat is can be simply slotted on to the Pi's GPIO Pins.
+<p align="center">
+	<img src="https://i.imgur.com/nJ8fABR.png" alt="High Level Diagram"/>
+</p>
+
 
 ------------
 
