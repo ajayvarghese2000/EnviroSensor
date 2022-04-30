@@ -7,5 +7,16 @@
     "python.analysis.typeCheckingMode": "basic",
     "python.analysis.extraPaths": [
         ".vscode\\Pico-Stub\\stubs"
+    ],
+    
+    "cmake.configureEnvironment": {
+        "PICO_SDK_PATH": "..\\..\\pico-sdk"
+    },
+    "cmake.configureOnOpen": true,
+    "cmake.cacheInit": null,
+
+    "cmake.preferredGenerators":[
+        "NMake Makefiles"
     ]
+    
 }
