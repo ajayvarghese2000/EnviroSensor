@@ -36,9 +36,6 @@ def get_cpu_temperature():
 # temperature down, and increase to adjust up
 
 
-for v in variables:
-    values[v] = [1] * WIDTH
-
 def get_temperature():
 	factor = 2.25 	# Tuning factor for compensation, decrease to lower
 					#temp, increase to raise temp
@@ -49,7 +46,9 @@ def get_temperature():
 	raw_temp = bme280.get_temperature()
 	data = raw_temp - ((avg_cpu_temp - raw_temp) / factor)
 	return data
-	
+
+
+'''	
 def get_gas():
 	data = gas.read_all()
 	gas["co"] = data.oxidising/1000
@@ -64,6 +63,7 @@ def get_air():
 	air["pm10"] = data.pm_ug_per_m3(10)
 	return air
 
+'''
 
         
 
