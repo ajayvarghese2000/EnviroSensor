@@ -134,13 +134,13 @@ enviro = Enviro()
 
 while True:
 
-	# Getting the Light data
-	light_data = enviro.get_light()
+    # Getting the Light data
+    light_data = enviro.get_light()
 
-	# Printing the data to console
+    # Printing the data to console
     print(str(light_data))
 
-	# Sleeping not to overload the sensors
+    # Sleeping not to overload the sensors
     sleep(0.1)
 
 ```
