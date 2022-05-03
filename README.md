@@ -118,6 +118,30 @@ Once the system reboots you should be able to run `Enviro+.py` without problems.
 
 ## Deployment
 
+Deployment is easy once the installation is complete. You can copy the `Enviro+.py` file to your project directory and import the `Enviro` class. You can then create an object of the class and call the functions to get the data from the sensors.
+
+A testing example is provided below and can be found in the `Enviro+.py` file.
+
+```
+## [Testing]
+
+# Creating the Enviro object
+enviro = Enviro()
+
+while True:
+
+	# Getting the Light data
+	light_data = enviro.get_light()
+
+	# Printing the data to console
+    print(str(light_data))
+
+	# Sleeping not to overload the sensors
+    sleep(0.1)
+
+```
+
+for a full list of all member functions and their parameters see the `Enviro.py` file, or the [Code Overview](#Code-Overview) section.
 
 
 ------------
