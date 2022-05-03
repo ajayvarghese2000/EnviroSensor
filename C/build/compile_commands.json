@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/dev/git/EnviroSensor/C/build",
-  "command": "/bin/c++    -g   -o CMakeFiles/i2cTest.dir/i2cTest.cpp.o -c /home/dev/git/EnviroSensor/C/i2cTest.cpp",
-  "file": "/home/dev/git/EnviroSensor/C/i2cTest.cpp"
-}
-]

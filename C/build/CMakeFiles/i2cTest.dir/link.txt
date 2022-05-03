@@ -1,2 +1,0 @@
-/bin/ar qc libi2cTest.a  CMakeFiles/i2cTest.dir/i2cTest.cpp.o
-/bin/ranlib libi2cTest.a
