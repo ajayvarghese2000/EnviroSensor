@@ -95,12 +95,29 @@ The `Enviro+.py` file contains the Enviro class that has member functions that a
 
 ## Installation
 
-*How to download and setup the code on the Pi Pico/Pi*
+**Step 1** : Clone the repo to the target device, If you have git installed you can do so by running the following.
+
+```
+git clone https://github.com/lboroWMEME-TeamProject/EnviroSensor
+```
+
+**Step 2** : Install the Python dependencies and setup the required peripherals using the supplied install script.
+
+```
+sudo ./install.sh
+```
+
+**Setp 3** : Reboot the system to apply the changes
+```
+sudo reboot
+```
+
+Once the system reboots you should be able to run `Enviro+.py` without problems.
 
 ------------
 
 ## Deployment
 
-*How to get it running and outputting data*
+
 
 ------------
