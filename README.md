@@ -67,7 +67,16 @@ As the Enviro+ is a Pi-Hat is can be simply slotted on to the Pi's GPIO Pins.
 
 ## Code Overview
 
-*breakdown of how the code is structured*
+The `Enviro+.py` file contains the Enviro class that has member functions that allow you to access the data from the sensors. Once the Enviro object has been created you can call the following functions to get the data from the respective sensors.
+
+
+- `get_temperature()` - This returns the temperature in celsius from the Enviro sensor
+- `get_gas()` - This returns a dictionary with key value pairs for the concentration of CO, NO2 and NH3 in PPM
+- `get_air()` - This returns a dictionary with key value pairs for the concentration of PM1, PM2.5 and PM10 particulates in ug/m³
+- `get_pressure()` - This returns the atmospheric pressure in hPa
+- `get_humidity()` - This returns the humidity of the air as a percentage
+- `get_light()` - This returns the level of light in Lux
+- `get_cpu_temperature()` - This returns the CPU temperature of a RPi, usefull in compensating the `get_temperature()` function.
 
 ------------
 
