@@ -76,18 +76,22 @@ The `Enviro+.py` file contains the Enviro class that has member functions that a
 - `get_pressure()` - This returns the atmospheric pressure in hPa
 - `get_humidity()` - This returns the humidity of the air as a percentage
 - `get_light()` - This returns the level of light in Lux
-- `get_cpu_temperature()` - This returns the CPU temperature of a RPi, usefull in compensating the `get_temperature()` function.
+- `get_cpu_temperature()` - This returns the CPU temperature of a RPi, useful in compensating the `get_temperature()` function.
 
 ------------
 
 ## Test Plan
 
-*to be added*
-
 <div align="center">
 
 |Objective|Testing Strategy|Expected Output|Current Output|Pass/Fail|
 |--|--|--|--|:--:|
+|Testing the functionality of the Temperature sensor.|Log the temperature sensors value continuously to the terminal and wait for it to equalise to room temperature. Then check the value against a thermometer and heat the sensor up with a flame for 10 seconds. Finally wait for it to return to room temperature |The sensor should display room temperature at first which should be roughly the same as the reading from the thermometer, then the reading should increase rapidly when next to the flame before coming back down to the previous value.|The temperature reading does start at room temperature which does match the reading from the thermometer. When the flame is next to the sensor the temperature value does increase before settling back to room temp when the flame is removed.|:heavy_check_mark:|
+|Testing the functionality of the Particulates sensor.|Switch the sensor on and set the sensor to log the values to the console. Then spray an aerosol for 5 seconds.|The value should settle down to some constants, once that aerosol has been sprayed the PM10 and PM2.5 particles should increase dramatically for a while before settling down back to the old constants |The sensor does settle to a baseline, when the aerosols is sprayed the sensor values increase dramatically before settling back down to the original baseline.|:heavy_check_mark:|
+|Testing the functionality of the Pressure sensor.|Switch the sensor on and log its value to the console|The expected output should be around 1,013.25 hPa|The value given by the sensor is about that value and changes very little|:heavy_check_mark:|
+|Testing the functionality of the Humidity sensor.|Switch the sensor on and log its value to the console. This should be done outside.|The value from the sensor should roughly equal to the value found from weather sites of the testing area|The value does match the expected output within a few percentage points.|:heavy_check_mark:|
+|Testing the functionality of the Light sensor.|Set the sensor to continuously log its reading into the console. The use a torch to test the sensor readings. |When the torch is shining the sensors Lux reading should increase and will continue to increase the closer the light source is to the sensor.|The sensor behaves as expected, when the torch is on the reading increases and the closer the torch is to the sensor the higher the Lux reading|:heavy_check_mark:|
+|Testing the functionality of the Gas sensor.|As we can not test the gas sensor in a safe manor with the facilities we have access to, this sensor will not be tested but rather the raw readings will be taken as is for the demonstration.|*n/a*|*n/a*|:cross_mark:|
 
 </div>
 
